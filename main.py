@@ -70,7 +70,7 @@ async def generate_materials(file: UploadFile = File(...)):
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": text_content[:15000]} # Limit characters to avoid token overload
         ],
-        model="llama3-70b-8192",
+        model="llama-3.3-70b-versatile"
         response_format={"type": "json_object"},
         temperature=0.3
     )
